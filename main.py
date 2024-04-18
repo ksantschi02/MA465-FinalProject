@@ -224,7 +224,7 @@ class Blackjack:
 
         print(f"Strategy: {strategy}")
 
-        # For each of 12 decks,
+        # Play through 12 decks. This number may be changed to increase the sample size
         while deckNum <= 12:
 
             # Deal the initial cards
@@ -245,7 +245,7 @@ class Blackjack:
             # Otherwise, determine the winner of the round normally
             determineWinner(calculateHandValue(self.playerHand), calculateHandValue(self.dealerHand), True)
 
-        # After all 12 decks are run out, set the deck number back to 1 and print the results of the decks
+        # After all decks are run out, set the deck number back to 1 and print the results of the decks
         deckNum = 1
         print("Results:", resultList)
         print("Average:", round(sum(resultList) / len(resultList), 2))
